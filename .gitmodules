@@ -1,0 +1,3 @@
+[submodule "3rdParty/VRCFaceTracking"]
+	path = 3rdParty/VRCFaceTracking
+	url = git@github.com:benaclejames/VRCFaceTracking.git

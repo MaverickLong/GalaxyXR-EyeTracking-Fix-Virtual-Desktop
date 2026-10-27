@@ -62,13 +62,15 @@ With the headset on, tilt your head about 90 degrees left and look up, down, lef
 
 ## Build from source
 
-You need the .NET SDK. The project targets `net7.0-windows`, and a newer SDK such as .NET 8 can build it.
+You need the .NET 10 SDK. The project targets `net10.0-windows`, the same runtime as current VRCFaceTracking.
+
+VRCFaceTracking is a git submodule in `3rdParty/VRCFaceTracking`, and the module builds against its `VRCFaceTracking.Core` and `VRCFaceTracking.SDK` projects. Clone with `--recursive`, or run `git submodule update --init` after cloning.
 
 ```
 dotnet build VirtualDesktop.FaceTracking.csproj -c Release
 ```
 
-The DLL is written to `bin/Release/net7.0-windows/`. The reference `VRCFaceTracking.Core.dll` is in `3rdParty/`.
+The DLL is written to `bin/Release/net10.0-windows/`.
 
 Releases are built by GitHub Actions (`.github/workflows/build-release.yml`) whenever a tag starting with `v` is pushed, for example `v1.0.0`.
 
